@@ -21,7 +21,7 @@ public class CustomerOrderController {
     private CustomerOrderService orderService;
     ResponseEntity<?> responseEntity;
 
-    @PostMapping
+    @PostMapping("/addCustomerOrder")
     public ResponseEntity<?> addCustomerOrder(@RequestBody CustomerOrder customerOrder){
         try {
             CustomerOrder customerOrderObj = orderService.addCustomerOrder(customerOrder);
@@ -32,7 +32,7 @@ public class CustomerOrderController {
         return responseEntity;
     }
 
-    @GetMapping
+    @GetMapping("/getAllOrders")
     public ResponseEntity<?> getAllCustomerOrder(){
         try {
             List<CustomerOrder> customerOrders = orderService.getAllCustomerOrders();

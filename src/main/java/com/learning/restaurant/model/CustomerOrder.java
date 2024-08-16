@@ -20,6 +20,9 @@ public class CustomerOrder {
     private double totalPrice;
     private String username;
 
-
-
+    public CustomerOrder(int orderId, double totalPrice, String username) {
+        this.orderId = orderId;
+        this.totalPrice = totalPrice;
+        this.username = username;
+    }
 }
